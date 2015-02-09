@@ -11,7 +11,10 @@
 #include <allegro5/allegro_ttf.h>
 #include<allegro5/allegro_audio.h>
 #include<allegro5/allegro_acodec.h>
+#include<string>
 
+#include "questions.h"
+using namespace std;
 //set size of the screen
 #define ScreenWidth 800
 #define ScreenHeight 600
@@ -79,6 +82,22 @@ int main()
 	// start screen
 	al_draw_triangle(200, 200 + y, 200, 220 + y, 220, 210 + y, green, 2.0);
 
+	al_draw_textf(font18, green, ScreenWidth / 2, 150, ALLEGRO_ALIGN_CENTER, char13);
+
+
+	al_draw_textf(font18, green, 225, 200, 0, char13a);
+
+
+	al_draw_textf(font18, green, 225, 250, 0, char13b);
+
+
+	al_draw_textf(font18, green, 225, 300, 0, char13c);
+
+
+	al_draw_textf(font18, green, 225, 350, 0, char13d);
+
+	
+
 	al_flip_display();
 	al_clear_to_color(al_map_rgb(0, 0, 0));
 	
@@ -102,7 +121,7 @@ int main()
 			switch (events.keyboard.keycode)
 		{
 		case ALLEGRO_KEY_DOWN:
-		{if (y < 200)
+		{if (y < 150)
 		{
 			y += moveSpeed;
 			al_play_sample(soundEffect, 1.0, 0.0, 1.0, ALLEGRO_PLAYMODE_ONCE, 0);
@@ -125,8 +144,22 @@ int main()
 	//	}
 			if (draw)
 			{
+				al_draw_triangle(200, 200 + y, 200, 220 + y, 220, 210 + y, green, 2.0);
+
+				al_draw_textf(font18, green, ScreenWidth / 2, 150, ALLEGRO_ALIGN_CENTER, char13);
+
 				
-				al_draw_triangle(200, 200+y, 200, 220+y, 220, 210+y, green,2.0);
+				al_draw_textf(font18, green, 225, 200, 0, char13a);
+
+				
+				al_draw_textf(font18, green, 225, 250, 0, char13b);
+
+				
+				al_draw_textf(font18, green, 225, 300, 0, char13c);
+
+				
+				al_draw_textf(font18, green, 225, 350, 0, char13d);
+
 				al_flip_display();
 				al_clear_to_color(al_map_rgb(0, 0, 0));
 				draw = false;

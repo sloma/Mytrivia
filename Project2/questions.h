@@ -1,10 +1,14 @@
 #include <allegro5/allegro.h>
 #include<string>
 using namespace std;
-
+//22 chapters, 10 questions with 4 options for each = (1+4)*10
+char *testing[22][50];
 //chapt1
 string quest11 = "1. What programming language is used in this book?";
 char *char11 = (char*)quest11.c_str();
+testing[0][0]=
+
+
 string quest11a = "A. C ";
 char *char11a = (char*)quest11a.c_str();
 string quest11b = "B. Pascal ";

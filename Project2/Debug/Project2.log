@@ -1,14 +1,14 @@
-﻿Build started 2/9/2015 1:42:50 PM.
+﻿Build started 2/10/2015 4:18:17 PM.
      1>Project "C:\Users\salim\Documents\Visual Studio 2013\Projects\Project2\Mytrivia\Project2\Project2.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
-     1>cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
          main.cpp
-     1>c:\users\salim\documents\visual studio 2013\projects\project2\mytrivia\project2\questions.h(22): error C2374: 'quest11c' : redefinition; multiple initialization
-                 c:\users\salim\documents\visual studio 2013\projects\project2\mytrivia\project2\questions.h(11) : see declaration of 'quest11c'
-     1>c:\users\salim\documents\visual studio 2013\projects\project2\mytrivia\project2\main.cpp(114): warning C4554: '|' : check operator precedence for possible error; use parentheses to clarify precedence
-     1>Done Building Project "C:\Users\salim\Documents\Visual Studio 2013\Projects\Project2\Mytrivia\Project2\Project2.vcxproj" (Build target(s)) -- FAILED.
+     1>c:\users\salim\documents\visual studio 2013\projects\project2\mytrivia\project2\main.cpp(193): warning C4554: '|' : check operator precedence for possible error; use parentheses to clarify precedence
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\salim\Documents\Visual Studio 2013\Projects\Project2\Mytrivia\Debug\Project2.exe" /INCREMENTAL /NOLOGO "allegro-5.0.10-monolith-md-debug.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\salim\Documents\Visual Studio 2013\Projects\Project2\Mytrivia\Debug\Project2.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\salim\Documents\Visual Studio 2013\Projects\Project2\Mytrivia\Debug\Project2.lib" /MACHINE:X86 Debug\main.obj
+         Project2.vcxproj -> C:\Users\salim\Documents\Visual Studio 2013\Projects\Project2\Mytrivia\Debug\Project2.exe
+     1>Done Building Project "C:\Users\salim\Documents\Visual Studio 2013\Projects\Project2\Mytrivia\Project2\Project2.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:02.35
+Time Elapsed 00:00:03.31

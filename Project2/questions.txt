@@ -1,0 +1,512 @@
+1. What programming language is used in this book? 
+A. C 
+B. Pascal 
+C. C++ 
+D. Assembly 
+2. What is the name of the free multi-platform game library used in this book? 
+A. Treble 
+B. Staccato 
+C. Allegro 
+D. FreeBSD 
+3. What compiler can you use to compile the programs in this book? 
+A. Dev-C++ 
+B. Borland C++Builder 
+C. Microsoft Visual C++ 
+D. All of the above 
+4. Which operating system does Allegro support? 
+A. Windows 
+B. Linux 
+C. Mac OS X 
+D. All of the above 
+5. Which of the following is a popular strategy game for the PC? 
+A. Counter-Strike 
+B. Splinter Cell 
+C. Civilization IV 
+D. Advance Wars
+6. What is the most important factor to consider when working on a game? 
+A. Graphics 
+B. Sound effects 
+C. Gameplay 
+D. Level design
+7. What is the name of the free open-source IDE/compiler included on the CD-ROM? 
+A. Visual C++ 
+B. Dev-C++ 
+C. Watcom C++ 
+D. C++Builder 
+8. What is the name of the most popular game development library in the world? 
+A. OpenGL 
+B. DJGPP 
+C. DirectX 
+D. Allegro 
+9. Which of the following books discusses the gaming culture of the late 1980s and early 1990s with strong emphasis on the exploits of id Software? 
+A. Masters of Doom 
+B. The Age of Spiritual Machines 
+C. The Inmates Are Running the Asylum 
+D. Silicon Snake Oil
+10. According to the author, which of the following is one of the best games made in the 1980s? 
+A. Civilization III 
+B. Counter-Strike 
+C. King’s Quest IV: The Perils of Rosella 
+D. Star?ight
+1. What version of Allegro are we using here? 
+A. 1.0 
+B. 2.4 
+C. 4.2 
+D. 5.3 
+2. GNU is an acronym for which of the following phrases? 
+A. GNU is Not UNIX 
+B. Great Northern University 
+C. Central Processing Unit 
+D. None of the above 
+3. What is the primary website for Dev-C++? 
+A. http://www.microsoft.com 
+B. http://www.bloodshed.net 
+C. http://www.borland.com 
+D. http://www.fsf.org 
+4. What is the name of the compiler used by Dev-Pascal? 
+A. GNU Pascal 
+B. Turbo Pascal
+C. Object Pascal 
+D. Microsoft Pascal
+5. What version of Dev-C++ are we using in this book? 
+A. 3.0 
+B. 4.0 
+C. 5.0 
+D. 6.0 
+6. Which version of Visual C++ are we focusing primarily on in this book? 
+A. 6.0 
+B. 7.0 (2002) 
+C. 7.1 (2003) 
+D. 8.0 (2005) 
+7. What distinctive feature of Dev-C++ sets it apart from commercial development tools? 
+A. Dev-C++ is open-source 
+B. Dev-C++ is free 
+C. Dev-C++ is multi-platform 
+D. All of the above 
+8. What is the name of the game programming library featured in this chapter? 
+A. DirectX 
+B. Gnome 
+C. GTK+ 
+D. Allegro 
+9. What function must be called before you use the Allegro library? 
+A. main() B. byte_me() 
+C. allegro_init() 
+D. lets_get_started() 
+10. What statement must be included at the end of main() in an Allegro program? 
+A. END_OF_THE_WORLD() 
+B. END_OF_MAIN() 
+C. END_OF_FREEDOM() 
+D. AH_DONUTS()
+1. What is the term used to describe line-based graphics? 
+A. Vector 
+B. Bitmap
+C. Polygon 
+D. Pixel 
+2. What does CRT stand for? 
+A. Captain Ron Teague 
+B. Corporate Resource Training 
+C. Cathode Ray Tube 
+D. Common Relativistic Torch 
+3. What describes a function that draws a simple geometric shape, such as a point, line, rectangle, or circle? 
+A. putpixel 
+B. Graphics Primitive 
+C. triangle 
+D. polygon 
+4. How many polygons does the typical 3D accelerator chip process at a time? 
+A. 16 
+B. 8 
+C. 1 
+D. 256 
+5. What is comprised of three small streams of electrons of varying shades of red, green, and blue? 
+A. Superstring 
+B. Quantum particle 
+C. Electron gun 
+D. Pixel 
+6. What function is used to create a custom 24- or 32-bit color? 
+A. makecol 
+B. rgb 
+C. color 
+D. truecolor 
+7. What function is used to draw ?lled rectangles? 
+A. ?ll_rect 
+B. ?llrect 
+C. ?lledrectangle 
+D. rect?ll
+8. Which of the following is the correct de?nition of the circle function? 
+A. void circle(BITMAP bmp, int x, int y, int radius, int color); 
+B. void draw_circle(BITMAP bmp, int x, int y, int radius); 
+C. int circle(BITMAP bmp, int y, int x, int radius, int color); 
+D. bool circle(BITMAP bmp, int x, int y, int color); 
+9. What function draws a set of curves based on a set of four input points stored in an array? 
+A. jagged 
+B. draw_curves 
+C. spline 
+D. polygon 
+10. Which text output function draws a formatted string with justi?cation? 
+A. textout_justify 
+B. textprintf_right 
+C. textout_centre 
+D. textprintf_justify
+1. What is the primary graphics drawing function used to draw the tanks in Tank War? 
+A. rect?ll 
+B. ?llrect 
+C. drawrect 
+D. rectangle 
+2. What function in Tank War sets up a bullet to ?re in the direction of the tank? 
+A. pulltrigger 
+B. launchprojectile 
+C. ?reweapon 
+D. ?recannon 
+3. What function in Tank War updates the position and draws each projectile? 
+A. updatecannon 
+B. movebullet 
+C. moveprojectile 
+D. updatebullet
+4. What is the name of the organization that produced GCC? 
+A. Free Software Foundation 
+B. GNU 
+C. Freeware 
+D. Open Source 
+5. How many players are supported in Tank War at the same time? 
+A. 1 
+B. 2 
+C. 3 
+D. 4 
+6. What is the technical terminology for handling two objects that crash in the game? 
+A. Crash override 
+B. Sprite insurance 
+C. Collision detection 
+D. Handling the crash 
+7. What function in Tank War keeps the tanks from colliding with other objects? 
+A. makepath 
+B. clearpath 
+C. buildpath 
+D. dontcollide 
+8. Which function in Tank War helps to ?nd out whether a point on the screen is black? 
+A. getpixel 
+B. ?ndcolor 
+C. getcolor 
+D. checkpixel 
+9. What is the standard constant used to run Allegro in windowed mode? 
+A. GFX_RUNINA_WINDOW 
+B. GFX_DETECT_WINDOWED 
+C. GFX_AUTODETECT_WINDOWS 
+D. GFX_AUTODETECT_WINDOWED
+10. What function in Allegro is used to slow the game down? 
+A. pause 
+B. slow 
+C. rest 
+D. stop
+1. Which function is used to initialize the keyboard handler? 
+A. initialize_keyboard 
+B. install_keyboard 
+C. init_keyboard 
+D. install_keyboard_handler 
+2. What does ANSI stand for?
+A. American Negligible Situation Imperative 
+B. American Nutritional Studies Institute 
+C. American National Standards Institute 
+D. American National Scuba Institute 
+3. What is the name of the array containing keyboard scan codes? 
+A. key 
+B. keyboard 
+C. scancodes 
+D. keys 
+4. Where is the real stargate located? 
+A. Salt Lake City, Utah 
+B. San Antonio, Texas 
+C. Colorado Springs, Colorado 
+D. Cairo, Egypt
+5. Which function provides buffered keyboard input? 
+A. scankey 
+B. getkey 
+C. readkey 
+D. buffered_input 
+6. Which function is used to initialize the mouse handler? 
+A. install_mouse 
+B. instantiate_mouse 
+C. initialize_mouse 
+D. ingratiate_mouse 
+7. Which values or functions are used to read the mouse position? 
+A. mouse_x and mouse_y B. get_mouse_x and get_mouse_y 
+C. mousex and mousey 
+D. mouse_position_x and mouse_position_y 
+8. Which function is used to read the mouse x and y mickeys for relative motion? 
+A. mickey_mouse 
+B. read_mouse_mickeys 
+C. mouse_mickeys 
+D. get_mouse_mickeys 
+9. What is the name of the main JOYSTICK_INFO array? 
+A. joysticks 
+B. joy 
+C. sticks 
+D. joystick 
+10. Which struct contains joystick button data? 
+A. JOYSTICK_BUTTONS 
+B. JOYSTICK_BUTTON 
+C. JOYSTICK_BUTTON_INFO 
+D. JOYSTICK_BUTTON_DATA
+1. What is the name of the function that initializes the Allegro sound system? 
+A. install_sound 
+B. init_sound 
+C. initialize_sound_system 
+D. init_snd
+2. Which function can you use to play a sound effect in your own games? 
+A. start_playback 
+B. play_sound 
+C. play_sample 
+D. digi_snd_play
+3. What is the name of the function that speci?cally loads a RIFF WAV ?le? 
+A. load_riff 
+B. load_wav 
+C. load_wave 
+D. load_riff_wav
+4. Which function can be used to change the frequency, volume, panning, and looping properties of a sample? 
+A. modify_sample 
+B. change_sample 
+C. alter_sample 
+D. adjust_sample
+5. What function would you use to shut down the Allegro sound system? 
+A. uninstall_sound 
+B. remove_sound 
+C. close_sound 
+D. close_sound_system
+6. Which function provides the ability to change the overall volume of sound output? 
+A. set_volume 
+B. change_volume 
+C. ?x_volume 
+D. set_vol
+7. What is the name of the function used to stop playback of a sample? 
+A. stop_playback 
+B. stop_playing 
+C. halt_playback 
+D. stop_sample
+8. Within what range must a panning value remain? 
+A. –32,768 to 32,767 
+B. 0 to 65,536 
+C. 1 to 100 
+D. 0 to 255
+9. What parameter should you pass to install_sound to initialize the standard digital sound driver? 
+A. SND_AUTODETECT 
+B. SND_AUTODETECT_DIGITAL 
+C. DIGI_AUTODETECT 
+D. DIGI_AUTODETECT_SOUND
+10. What is the name of the function that plays a sample through the sound mixer? 
+A. start_playback 
+B. play_sample 
+C. play_sample_mix 
+D. start_mix_playback
+1. What does ‘‘blit’’ stand for? 
+A. Blitzkrieg 
+B. Bit-block transfer 
+C. Bit-wise transparency 
+D. Basic logarithmic infrared transmitter
+2. What is a DHD? 
+A. Dynamic hard drive 
+B. Destructive hyperactivity disorder 
+C. Dial home device 
+D. That wasn’t in the chapter! 
+3. How many pixels are there in an 800600 screen? 
+A. 480,000 
+B. 28,800,000 
+C. 65,538 
+D. 47
+4. What is the name of the object used to hold a bitmap in memory? 
+A. hold_bitmap B. create_bitmap C. OBJECT D. BITMAP
+5. Allegorically speaking, why is it important to destroy bitmaps after you’re done using them? 
+A. Because bitmaps are evil and must be destroyed. 
+B. Because Microsoft Windows is the mayor. 
+C. Because the trash will pile up over time. 
+D. Because you can’t reboot your home town.
+6. Which Allegro function has the potential to create a black hole if used improperly? 
+A. acquire_bitmap 
+B. create_supernova 
+C. do_feedback 
+D. release_bitmap
+7. What types of graphics ?les are supported by Allegro? 
+A. PCX, LBM, BMP, and GIF 
+B. BMP, PCX, LBM, and TGA 
+C. GIF, JPG, PNG, and BMP 
+D. TGA, TIF, JPG, and BMP
+8. What function is used to draw a scaled bitmap? 
+A. draw_scaled_bitmap 
+B. stretch_blit 
+C. scaled_blit 
+D. masked_scaled_blit 
+9. Why would you want to lock the screen while drawing on it? 
+A. If it’s not locked, Allegro will lock and unlock the screen for every draw. 
+B. To prevent anyone else from drawing on your screen. 
+C. To keep the screen from getting away while you’re using it. 
+D. To prevent a feedback loop that could destroy your monitor. 
+10. What is the name of the game you’ve been developing in this book? 
+A. Super Allegro Bros. 
+B. Barbie’s Motorhome Adventure 
+C. Teenage Neutered Midget Poodles 
+D. Tank War
+1. What is the term given to a small image that is moved around on the screen? 
+A. Bitmap 
+B. Sprite 
+C. Fairy 
+D. Mouse cursor 
+2. Which function draws a sprite? 
+A. draw_sprite 
+B. show_sprite 
+C. display_sprite 
+D. blit_sprite 
+3. What is the term for drawing all but a certain color of pixel from one bitmap to another? 
+A. Alpha blending 
+B. Translucency 
+C. Transparency 
+D. Telekinesis 
+4. Which function draws a scaled sprite? 
+A. stretch_sprite 
+B. draw_scaled_sprite 
+C. draw_stretched_sprite 
+D. scale_sprite 
+5. Which function draws a vertically ?ipped sprite? 
+A. draw_vertical_?ip 
+B. draw_sprite_v_?ip 
+C. ?ip_v_sprite 
+D. draw_?ipped_sprite 
+6. Which function draws a rotated sprite? 
+A. rotate_angle 
+B. draw_rotated_sprite 
+C. draw_rotation 
+D. rotate_sprite
+7. Which function draws a sprite with both rotation and scaling? 
+A. draw_sprite_rotation_scaled 
+B. rotate_scaled_sprite 
+C. draw_rotated_scaled_sprite 
+D. scale_rotate_sprite 
+8. What function draws a pivoted sprite? 
+A. draw_pivoted_sprite 
+B. draw_pivot_sprite 
+C. pivot_sprite 
+D. draw_sprite_pivot 
+9. Which function draws a pivoted sprite with scaling and vertical ?ip? 
+A. pivot_scaled_sprite_v_?ip 
+B. pivot_stretch_v_?ip_sprite 
+C. draw_scaled_pivoted_?ipped_sprite 
+D. scale_pivot_v_?ip_sprite 
+10. Which function draws a sprite with translucency (alpha blending)? 
+A. alpha_blend_sprite 
+B. draw_trans_sprite 
+C. draw_alpha 
+D. trans_sprite
+1. Which function draws a standard sprite? 
+A. draw_standard_sprite 
+B. standard_sprite 
+C. draw_sprite 
+D. blit_sprite 
+2. What is a frame in the context of sprite animation? 
+A. A single image in the animation sequence 
+B. The bounding rectangle of a sprite
+C. The source image for the animation sequence 
+D. A buffer image used to store temporary copies of the sprite 
+3. What is the purpose of a sprite handler? 
+A. To provide a consistent way to animate and manipulate many sprites on the screen 
+B. To prevent sprites from moving beyond the edges of the screen 
+C. To provide a reusable sprite drawing function D. To keep track of the sprite position 
+4. What is a struct element? 
+A. A property of a struct 
+B. A sprite behavior 
+C. The underlying Allegro sprite handler 
+D. A variable in a structure 
+5. Which term describes a single frame of an animation sequence stored in an image ?le? 
+A. Snapshot 
+B. Tile 
+C. Piece 
+D. Take 
+6. Which Allegro function is used frequently to erase a sprite? 
+A. rect?ll 
+B. erase_sprite 
+C. destroy_sprite 
+D. blit 
+7. Which term describes are usable activity for a sprite that is important in a game
+? A. Collision 
+B. Animation 
+C. Bounding 
+D. Behavior 
+8. What is the name of the new function that draws an animation frame to the screen? 
+A. drawanim 
+B. drawframe 
+C. animate 
+D. nextimage
+9. Which term best describes an image ?lled with rows and columns of small sprite images? 
+A. scrolling 
+B. sprite bitmap 
+C. sprite sheet 
+D. sprite tiles 
+10. How does a sprite struct improve the source code of a game? 
+A. Reduces global variable use 
+B. Eliminates code comments 
+C. Helps align code blocks 
+D. Consolidates code into functions
+1. What function will convert a normal bitmap in memory into a compressed RLE sprite? 
+A. convert_rle_sprite 
+B. get_rle_sprite
+C. make_rle_sprite 
+D. create_rle_sprite 
+2. What function will draw a compressed RLE sprite? 
+A. draw_sprite 
+B. copy_rle_sprite 
+C. draw_rle_sprite 
+D. rle_blit 
+3. What function converts a normal bitmap into a compiled sprite? 
+A. convert_compiled_sprite 
+B. make_compiled_sprite 
+C. create_compiled_sprite 
+D. get_compiled_sprite 
+4. What is the name of the function presented in this chapter for performing bounding-rectangle collision testing? 
+A. collided 
+B. collision 
+C. colliding 
+D. test_collision 
+5. What is the name of the function in the sprite class presented in this chapter that draws a single frame of an animation sequence? 
+A. drawanimation 
+B. nextframe 
+C. drawframe 
+D. draw_sprite 
+6. What is the name of the function that calculates angular velocity for X? 
+A. calculatevelocity 
+B. velocityx 
+C. calc_angle_x 
+D. calcAngleMoveX 
+7. What mathematical function is called on to calculate the angular velocity for Y? 
+A. sine 
+B. cosine 
+C. tangent 
+D. arcsine
+8. Which function converts a normal sprite into a run-length encoded sprite? 
+A. convert_sprite 
+B. get_rle_sprite 
+C. convert_to_rle 
+D. load_rle_sprite 
+9. Which function draws a compiled sprite to a destination bitmap? 
+A. draw_compiled 
+B. draw_comp_sprite 
+C. draw_compiled_sprite 
+D. compiled_sprite 
+10. What is the easiest (and most ef?cient) way to detect sprite collisions? 
+A. Bounding rectangle intersection 
+B. Pixel comparison 
+C. Bilinear quadratic evaluation 
+D. Union of two spheres
+/// missing 11 to end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

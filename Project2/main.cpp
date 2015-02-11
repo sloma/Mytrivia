@@ -12,11 +12,14 @@
 #include<allegro5/allegro_audio.h>
 #include<allegro5/allegro_acodec.h>
 #include<string>
+#include <iostream>
+#include <fstream>
+#include <sstream>
 
-#include "questions.h"
+
 using namespace std;
 //set size of the screen
-#define ScreenWidth 800
+#define ScreenWidth 1200		
 #define ScreenHeight 600
 
 int main()
@@ -37,15 +40,21 @@ int main()
 	display = al_create_display(ScreenWidth, ScreenHeight);
 	if (!display)
 	al_show_native_message_box(display, NULL, NULL, "failed to create display!\n", NULL, NULL);
-	al_set_window_position(display, 200, 200);
+	al_set_window_position(display, 100, 100);
 
 
 	// set varaible
 
 	bool done = false, draw = true, active = false;
 	const float FPS = 60.0;
-	float x= 0, y = 0, moveSpeed = 50;
+	int x= 0, y = 0, moveSpeed = 50;
 	int dir = DOWN;
+	int score = 0;
+	int questNumb=0;
+	int answerCount = 1;
+
+	char playerAnswer;
+
 	
 
 	//install al
@@ -71,7 +80,7 @@ int main()
 	//setup
 	ALLEGRO_KEYBOARD_STATE keyState;
 	//ALLEGRO_TIMER *timer = al_create_timer(1.0 / FPS);
-	ALLEGRO_FONT *font18 = al_load_font("arial.ttf", 18, 0);
+	ALLEGRO_FONT *font18 = al_load_font("arial.ttf",16, 0);
 	ALLEGRO_COLOR green = al_map_rgb(0, 255, 0);
 
 	ALLEGRO_EVENT_QUEUE *event_queue = al_create_event_queue();
@@ -79,24 +88,60 @@ int main()
 	//al_register_event_source(event_queue, al_get_timer_event_source(timer));
 	al_register_event_source(event_queue, al_get_display_event_source(display));
 
-	// start screen
-	al_draw_triangle(200, 200 + y, 200, 220 + y, 220, 210 + y, green, 2.0);
-
-	al_draw_textf(font18, green, ScreenWidth / 2, 150, ALLEGRO_ALIGN_CENTER, char13);
-
-
-	al_draw_textf(font18, green, 225, 200, 0, char13a);
-
-
-	al_draw_textf(font18, green, 225, 250, 0, char13b);
-
-
-	al_draw_textf(font18, green, 225, 300, 0, char13c);
-
-
-	al_draw_textf(font18, green, 225, 350, 0, char13d);
-
+	// text file to array of strings
 	
+	string questArray[1100];
+	short loop = 0;
+	string line;
+	ifstream inFile("questions.txt");
+	
+	if (inFile.is_open())
+	{
+		while (!inFile.eof())
+		{
+			getline(inFile, line);
+			questArray[loop] = line;
+
+			cout << questArray[loop] << endl;
+			loop++;
+		}
+		inFile.close();
+		inFile.clear();
+	}
+	else cout << "Can't open the file" << endl;
+
+	// answer file to array of strings
+
+	string answer[1100];
+	short loop2 = 0;
+	string line2;
+	ifstream inFile2("answers.txt");
+
+	if (inFile2.is_open())
+	{
+		while (!inFile2.eof())
+		{
+			getline(inFile2, line2);
+			answer[loop2] = line2;
+
+			cout << answer[loop2] << endl;
+			loop2++;
+		}
+		inFile.close();
+		inFile.clear();
+	}
+	else cout << "Can't open the file" << endl;
+
+	//char *line1 = (char*)question[0].c_str();
+//	char *line2 = (char*)question[1].c_str();
+//	char *line3 = (char*)question[2].c_str();
+//	char *line4 = (char*)question[3].c_str();
+//	char *line5 = (char*)question[4].c_str();
+
+	// start screen
+
+
+	al_draw_textf(font18, green, ScreenWidth / 2, 150, ALLEGRO_ALIGN_CENTER, "Welcome to Mytrivia! please press Space to start the game");
 
 	al_flip_display();
 	al_clear_to_color(al_map_rgb(0, 0, 0));
@@ -106,6 +151,40 @@ int main()
 //	al_start_timer(timer);
 	while (!done)
 	{
+		switch (y) {
+		case 0:playerAnswer = 'A'; break;
+		case 50:playerAnswer = 'B'; break;
+		case 100:playerAnswer = 'C'; break;
+		case 150:playerAnswer = 'D'; break;
+		}
+
+		if (draw)
+		{
+			al_draw_triangle(100, 200 + y, 100, 220 + y, 120, 210 + y, green, 2.0);
+
+			al_draw_textf(font18, green, 70, 150, 0, (char*)questArray[questNumb].c_str());
+
+
+			al_draw_textf(font18, green, 125, 200, 0, (char*)questArray[questNumb + 1].c_str());
+
+
+			al_draw_textf(font18, green, 125, 250, 0, (char*)questArray[questNumb + 2].c_str());
+
+
+			al_draw_textf(font18, green, 125, 300, 0, (char*)questArray[questNumb + 3].c_str());
+
+
+			al_draw_textf(font18, green, 125, 350, 0, (char*)questArray[questNumb + 4].c_str());
+
+
+
+			al_draw_textf(font18, green, 500, 500, 0, "Score: %i/%i", score, 1100 / 2);
+
+			al_flip_display();
+			al_clear_to_color(al_map_rgb(0, 0, 0));
+			draw = false;
+
+		}
 		
 		ALLEGRO_EVENT events;
 		al_wait_for_event(event_queue, &events);
@@ -125,7 +204,7 @@ int main()
 		{
 			y += moveSpeed;
 			al_play_sample(soundEffect, 1.0, 0.0, 1.0, ALLEGRO_PLAYMODE_ONCE, 0);
-			draw = true;
+			
 		}};
 		break;
 		case ALLEGRO_KEY_UP:
@@ -133,38 +212,34 @@ int main()
 		{
 			y -= moveSpeed;
 			al_play_sample(soundEffect, 1.0, 0.0, 1.0, ALLEGRO_PLAYMODE_ONCE, 0);
-			draw = true;
+			
 		}};
 		break;
+		case ALLEGRO_KEY_ENTER:
+		{	
+			al_draw_textf(font18, green, 600, 200, 0, (char*)answer[answerCount].c_str());
 
-		}}
-		
+			if (answer[answerCount].at(0) == playerAnswer)
+			{
+				score++;
+				al_draw_textf(font18, green, 400, 400, 0, "Good answer!");
+			}
+			else al_draw_textf(font18, green, 400, 400, 0, "Wrong answer!");
+
+			questNumb = questNumb + 5;
+			answerCount = answerCount + 2;
+		};
+		break;
+
+		}
+			
+			draw = true;
+		}
+
 		
 		//	draw = true;
 	//	}
-			if (draw)
-			{
-				al_draw_triangle(200, 200 + y, 200, 220 + y, 220, 210 + y, green, 2.0);
-
-				al_draw_textf(font18, green, ScreenWidth / 2, 150, ALLEGRO_ALIGN_CENTER, char13);
-
-				
-				al_draw_textf(font18, green, 225, 200, 0, char13a);
-
-				
-				al_draw_textf(font18, green, 225, 250, 0, char13b);
-
-				
-				al_draw_textf(font18, green, 225, 300, 0, char13c);
-
-				
-				al_draw_textf(font18, green, 225, 350, 0, char13d);
-
-				al_flip_display();
-				al_clear_to_color(al_map_rgb(0, 0, 0));
-				draw = false;
-				
-			}
+			
 		
 	}
 

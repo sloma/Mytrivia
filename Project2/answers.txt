@@ -1,0 +1,20 @@
+1. What programming language is used in this book? 
+A. C
+2. What is the name of the free multi-platform game library used in this book? 
+C. Allegro
+3. What compiler can you use to compile the programs in this book? 
+D. All of the above
+4. Which operating system does Allegro support? 
+D. All of the above
+5. Which of the following is a popular strategy game for the PC? 
+C. Civilization IV
+6. What is the most important factor to consider when working on a game? 
+C. Gameplay
+7. What is the name of the free open-source IDE/compiler included on the CD-ROM? 
+B. Dev-C++
+8. What is the name of the most popular game development library in the world? 
+C. DirectX
+9. Which of the following books discusses the gaming culture of the late 1980s and early 1990s, with strong emphasis on the exploits of id Software? 
+A. Masters of Doom
+10. According to the author, which of the following is one of the best games made in the 1980s? 
+D. Star?ight

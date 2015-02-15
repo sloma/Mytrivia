@@ -3,6 +3,8 @@
 // Author      : Salim Bouassida
 // Description : Assignment 1 for COMP 369
 //============================================================================
+
+
 #include <iostream>
 #include <allegro5/allegro5.h>
 #include <allegro5/allegro_native_dialog.h>
@@ -24,13 +26,7 @@ using namespace std;
 
 int main()
 {
-
-	
-
 	enum Direction { DOWN,UP };
-
-	
-
 	if (!al_init())
 		al_show_native_message_box(NULL, NULL, NULL, "failed to initialize allegro!", NULL, NULL);
 
@@ -46,17 +42,14 @@ int main()
 	// set varaible
 
 	bool done = false, draw = true, active = false;
-	const float FPS = 60.0;
 	int x= 0, y = 0, moveSpeed = 50;
 	int dir = DOWN;
 	int score = 0;
 	int questNumb=0;
-	int answerCount = 1;
-
+	int answerNumb = 0;
+	int count = 0;
+	int chapNumb = 1;
 	char playerAnswer;
-
-	
-
 	//install al
 	al_init_font_addon();
 	al_init_ttf_addon();
@@ -79,18 +72,17 @@ int main()
 	
 	//setup
 	ALLEGRO_KEYBOARD_STATE keyState;
-	//ALLEGRO_TIMER *timer = al_create_timer(1.0 / FPS);
 	ALLEGRO_FONT *font18 = al_load_font("arial.ttf",16, 0);
 	ALLEGRO_COLOR green = al_map_rgb(0, 255, 0);
 
 	ALLEGRO_EVENT_QUEUE *event_queue = al_create_event_queue();
 	al_register_event_source(event_queue, al_get_keyboard_event_source());
-	//al_register_event_source(event_queue, al_get_timer_event_source(timer));
+
 	al_register_event_source(event_queue, al_get_display_event_source(display));
 
 	// text file to array of strings
 	
-	string questArray[1100];
+	string questArray[1105];
 	short loop = 0;
 	string line;
 	ifstream inFile("questions.txt");
@@ -132,120 +124,115 @@ int main()
 	}
 	else cout << "Can't open the file" << endl;
 
-	//char *line1 = (char*)question[0].c_str();
-//	char *line2 = (char*)question[1].c_str();
-//	char *line3 = (char*)question[2].c_str();
-//	char *line4 = (char*)question[3].c_str();
-//	char *line5 = (char*)question[4].c_str();
-
 	// start screen
-
-
-	al_draw_textf(font18, green, ScreenWidth / 2, 150, ALLEGRO_ALIGN_CENTER, "Welcome to Mytrivia! please press Space to start the game");
+	al_draw_textf(font18, green, 70, 150, 0, "Welcome to My Trivia, please press Space to start the game");
 
 	al_flip_display();
 	al_clear_to_color(al_map_rgb(0, 0, 0));
 	
 	
-	
-//	al_start_timer(timer);
+
 	while (!done)
 	{
-		switch (y) {
-		case 0:playerAnswer = 'A'; break;
-		case 50:playerAnswer = 'B'; break;
-		case 100:playerAnswer = 'C'; break;
-		case 150:playerAnswer = 'D'; break;
-		}
-
-		if (draw)
-		{
-			al_draw_triangle(100, 200 + y, 100, 220 + y, 120, 210 + y, green, 2.0);
-
-			al_draw_textf(font18, green, 70, 150, 0, (char*)questArray[questNumb].c_str());
-
-
-			al_draw_textf(font18, green, 125, 200, 0, (char*)questArray[questNumb + 1].c_str());
-
-
-			al_draw_textf(font18, green, 125, 250, 0, (char*)questArray[questNumb + 2].c_str());
-
-
-			al_draw_textf(font18, green, 125, 300, 0, (char*)questArray[questNumb + 3].c_str());
-
-
-			al_draw_textf(font18, green, 125, 350, 0, (char*)questArray[questNumb + 4].c_str());
-
-
-
-			al_draw_textf(font18, green, 500, 500, 0, "Score: %i/%i", score, 1100 / 2);
-
-			al_flip_display();
-			al_clear_to_color(al_map_rgb(0, 0, 0));
-			draw = false;
-
-		}
-		
 		ALLEGRO_EVENT events;
 		al_wait_for_event(event_queue, &events);
 
 		al_get_keyboard_state(&keyState);
 		if (events.type == ALLEGRO_EVENT_DISPLAY_CLOSE | al_key_down(&keyState, ALLEGRO_KEY_ESCAPE))
-		{	
+		{
 			done = true;
 		}
-		//else if (events.type == ALLEGRO_EVENT_TIMER)
-	//	{
-		if (events.type == ALLEGRO_EVENT_KEY_DOWN){ 
-			switch (events.keyboard.keycode)
-		{
-		case ALLEGRO_KEY_DOWN:
-		{if (y < 150)
-		{
-			y += moveSpeed;
-			al_play_sample(soundEffect, 1.0, 0.0, 1.0, ALLEGRO_PLAYMODE_ONCE, 0);
-			
-		}};
-		break;
-		case ALLEGRO_KEY_UP:
-		{if (y > 0)
-		{
-			y -= moveSpeed;
-			al_play_sample(soundEffect, 1.0, 0.0, 1.0, ALLEGRO_PLAYMODE_ONCE, 0);
-			
-		}};
-		break;
-		case ALLEGRO_KEY_ENTER:
-		{	
-			al_draw_textf(font18, green, 600, 200, 0, (char*)answer[answerCount].c_str());
-
-			if (answer[answerCount].at(0) == playerAnswer)
-			{
-				score++;
-				al_draw_textf(font18, green, 400, 400, 0, "Good answer!");
+		
+			switch (y) {
+			case 0:playerAnswer = 'A'; break;
+			case 50:playerAnswer = 'B'; break;
+			case 100:playerAnswer = 'C'; break;
+			case 150:playerAnswer = 'D'; break;
 			}
-			else al_draw_textf(font18, green, 400, 400, 0, "Wrong answer!");
 
-			questNumb = questNumb + 5;
-			answerCount = answerCount + 2;
-		};
-		break;
+			if (draw)
+			{
+				al_draw_triangle(100, 200 + y, 100, 220 + y, 120, 210 + y, green, 2.0);
 
-		}
+				al_draw_textf(font18, green, 70, 150, 0, (char*)questArray[questNumb].c_str());
+
+
+				al_draw_textf(font18, green, 125, 200, 0, (char*)questArray[questNumb + 1].c_str());
+
+
+				al_draw_textf(font18, green, 125, 250, 0, (char*)questArray[questNumb + 2].c_str());
+
+
+				al_draw_textf(font18, green, 125, 300, 0, (char*)questArray[questNumb + 3].c_str());
+
+
+				al_draw_textf(font18, green, 125, 350, 0, (char*)questArray[questNumb + 4].c_str());
+
+				al_draw_textf(font18, green, 500, 500, 0, "Score: %i/%i", score, questNumb / 5);
+
+				al_draw_textf(font18, green, 50, 50, 0, "Chapter: %i", chapNumb);
+
+
+
+				al_flip_display();
+				al_clear_to_color(al_map_rgb(0, 0, 0));
+				draw = false;
+
+			}
+
 			
-			draw = true;
-		}
+		
+			if (events.type == ALLEGRO_EVENT_KEY_DOWN){
+				switch (events.keyboard.keycode)
+				{
+				case ALLEGRO_KEY_DOWN:
+				{if (y < 150)
+				{
+					y += moveSpeed;
+					al_play_sample(soundEffect, 1.0, 0.0, 1.0, ALLEGRO_PLAYMODE_ONCE, 0);
 
-		
-		//	draw = true;
-	//	}
+				}};
+				break;
+				case ALLEGRO_KEY_UP:
+				{if (y > 0)
+				{
+					y -= moveSpeed;
+					al_play_sample(soundEffect, 1.0, 0.0, 1.0, ALLEGRO_PLAYMODE_ONCE, 0);
+
+				}};
+				break;
+				case ALLEGRO_KEY_ENTER:
+				{
+					
+
+					if (answer[answerNumb].at(0) == playerAnswer)
+					{
+						score++;
+						al_draw_textf(font18, green, 400, 400, 0, "Good answer!");
+					}
+					else al_draw_textf(font18, green, 400, 400, 0, "Wrong answer!");
+
+					questNumb = questNumb + 5;
+					answerNumb = answerNumb + 1;
+					count++;
+					if (count == 10){
+						chapNumb++;
+						count = 0;
+					}
+					
+				};
+				break;
+
+				}
+
+		draw = true;
+			}
 			
-		
 	}
-
+	//destroy all pointers to avoid memory leaks
 	al_destroy_display(display);
-	//al_destroy_timer(timer);
 	al_destroy_sample(soundEffect);
+	al_destroy_font(font18);
 	al_destroy_sample(song);
 	al_destroy_sample_instance(songInstance);
 	al_destroy_event_queue(event_queue);
